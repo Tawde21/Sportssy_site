@@ -1,0 +1,14 @@
+<html>
+<body onload="alert(good)">
+celsius<input type="text" id="t1" oninput="fun()">;
+kelvin<input type="text"id="t2">
+<script>
+function fun()
+{
+var z=Number(document.getElementById("t1").value);
+var y=z+273;
+document.getElementById("t2").value=y;
+}
+</script>
+</body>
+</html>

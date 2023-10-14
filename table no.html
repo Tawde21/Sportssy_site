@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>grid layout</title>
+<style>
+.grid-container{
+display:grid;
+grid-template-areas:
+'h2 h2 h5 h5 h3 h3'
+'h2 h2 h5 h5 h3 h3'
+'h2 h2 h5 h5 h3 h3'
+'h1 h7 h7 h6 h6 h4'
+'h1 h7 h7 h6 h6 h4'
+'h1 h7 h7 h6 h6 h4';
+grid-gap:5px;
+background-color:blue;
+}
+.grid-container>div
+{
+background-color:powderblue;
+text-align:center;
+padding:100px;
+}
+.i1{
+grid-area:h1;
+}
+.i2{
+grid-area:h2;
+}.i3{
+grid-area:h3;
+}.i4{
+grid-area:h4;
+}.i5{
+grid-area:h5;
+}.i6{
+grid-area:h6;
+}.i7{
+grid-area:h7;
+}
+</style></head>
+<body>
+<div class="grid-container">
+<div class="i1"><div class="image">
+<image src="m5.jpg" align="center" height="300px" width="150"></div></div>
+<div class="i2"><div class="image">
+<image src="m2.jpg" align="center" height="300px" width="150"></div></div>
+<div class="i3"><div class="image">
+<image src="m3.jpg" align="center" height="300px" width="150"></div></div>
+<div class="i4"><div class="image">
+<image src="m4.jpg" align="center" height="300px" width="150"></div></div>
+<div class="i5"><div class="image">
+<image src="m1.jpg" align="center" height="1500px" width="1500"></div></div>
+<div class="i6"><div class="image">
+<image src="m6.jpg" align="center" height="300px" width="150"></div></div>
+<div class="i7"><div class="image">
+<image src="m7.jpg" align="center" height="300px" width="150"></div></div>
+</body>
+</html>

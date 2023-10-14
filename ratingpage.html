@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+margin:0;
+padding:0;
+background-image:url('stadium2.jpg');
+background-size:cover;
+}
+h1{
+Color:white;
+font-size:30px;
+font-style:Times New Roman;
+}
+
+#icons ul{
+position:absolute;
+top:80%;
+left:70%;
+transform: translate(-50%,-50%);
+margin:0;
+padding:0;
+display:flex;
+}
+#icons ul li {
+listy-style:none;
+margin:0 40px;
+}
+#icons ul li a .fa
+{
+font-size:40px;
+Color:#262626;
+line-height:80px;
+transition:.5s;
+}
+#icons ul li a
+{
+position:relative;
+display:block;
+width:80px;
+height:80px;
+background:#fff;
+text-align:center;
+transform:perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+transition:.5s;
+box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+
+#icons ul li a:before
+{
+content:'';
+position:absolute;
+top:10px;
+left:-20px;
+height:100%;
+width:20px;
+background:#b1b1b1;
+transition:.5s;
+transform:rotate(0deg) skewY(-45deg);
+}
+
+#icons ul li a:after
+
+{
+content:'';
+position:absolute;
+bottom:-20px;
+left:-10px;
+height:20px;
+width:100%;
+background:#b1b1b1;
+transition:.5s;
+transform:rotate(0deg) skewX(-45deg);
+}
+
+#icons ul li a:hover
+{
+
+transform:perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+.rating{
+position:absolute;
+top:20%;
+left:50%;
+transform: translate(-50%,-50%) rotateY(180deg);
+display:flex;
+}
+.rating input{
+/*display:none;*/
+}
+.rating label.fa
+{
+display:block;
+cursor:pointer;
+width:50px;
+background:#ccc;
+}
+.rating label :before
+{
+content:'\f005';
+font-family: fontAwesome;
+position:relative;
+display:block;
+font-size:50px;
+Color:#101010;
+
+
+}
+.rating label :after
+{
+content:'\f005';
+font-family: fontAwesome;
+position:absolute;
+display:block;
+font-size:50px;
+Color:#1f9cff;
+top:0;
+opacity:0;
+transition:.5s;
+text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover :after,
+.rating label:hover ~label :after,
+.rating input:checked ~label :after
+{
+opacity:1;
+}
+
+.contact-title{
+margin-top:100px;
+Color:#fff;
+text-transform: uppercase;
+
+}
+
+.contact-title h1{
+font-size:32px;
+line-height:10px;
+}
+.contact-title h2{
+font-size:16px;
+}
+
+form{
+margin-top:50px;
+transition:all 4s ease-in-out;
+}
+
+.form-control{
+width:400px;
+background:transparent;
+border:none;
+outline:none;
+border-bottom:1px solid white;
+Color:white;
+font-size:18px;
+margin-bottom:16px;
+}
+input{
+height:45px;
+}
+form .submit{
+background:#ff5722;
+border-color:transparent;
+Color:#fff;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+height:50px;
+margin-top:50px;
+}
+form .submit:hover{
+background-color:lightgreen;
+cursor:pointer;
+}
+#new{
+padding:10px 5px;
+background-color:silver;
+border-radius:5px;
+color:black;
+font-style:italic;
+font-size:20px;
+text-decoration:none;
+align:left;
+left-align:30px;
+}
+#new:hover{
+background-color:skyblue;
+}
+
+
+
+</style>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+>
+
+</head>
+
+
+<body>
+<a href="new1.html" id="new">Home</a>
+<h1><b><center>RANKING AND RATING</center></b></h1>
+
+<div id="icons">
+<ul>
+<li>
+<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+</li>
+
+<li>
+<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+</li>
+
+</ul>
+
+
+</div>
+
+<div class="rating">
+<input type="radio" name="star" id="star1"><label for="star1"><i class="fa fa-star" aria-hidden="true"></i>
+</label>
+<input type="radio" name="star" id="star1"><label for="star2"><i class="fa fa-star" aria-hidden="true"></i>
+</label>
+<input type="radio" name="star" id="star1"><label for="star3"><i class="fa fa-star" aria-hidden="true"></i>
+</label>
+<input type="radio" name="star" id="star1"><label for="star4"><i class="fa fa-star" aria-hidden="true"></i>
+</label>
+<input type="radio" name="star" id="star1"><label for="star5"><i class="fa fa-star" aria-hidden="true"></i>
+</label>
+</div>
+
+<div class="contact-title">
+<h1>&nbsp&nbsp&nbsp&nbspContact Us..!!</h1>
+<h2>&nbsp&nbsp&nbsp&nbspwe are always ready to serve u</h2>
+</div>
+<div class="contact-form">
+<form id="contact-form" >
+<input name="name" type="text" class="form-control" placeholder="Your Name" required>
+<br>
+<input name="email" type="email" class="form-control" placeholder="Your Email" required>
+<br>
+
+<textarea name="message" class="form-control" placeholder="Message" rows="4" reqiured></textarea><br>
+<input type="submit" class="form-control submit" value="SEND MESSAGE">
+</form>
+</div>
+
+
+
+
+
+
+</body>
+</html>

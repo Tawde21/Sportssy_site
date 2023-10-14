@@ -1,0 +1,129 @@
+<html>
+<head>
+<style>
+body{
+margin:0;
+padding:0;
+background-image:url('maxresdefault.jpg');
+}
+.glowing{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+.glowing span{
+color:#fff;
+font-family:verdana;
+font-size:10px;
+color:#fff;
+display:inline-block;
+animation:animate 2s linear infinite;
+width:24px;
+height:24px;
+text-align:center;
+line-height:24px;
+border:1px solid rgba(255,255,255,.4);
+margin:0 -2.5px;
+
+
+}
+#new{
+padding:10px 5px;
+background-color:silver;
+border-radius:5px;
+color:black;
+font-style:italic;
+font-size:20px;
+text-decoration:none;
+align:left;
+left-align:30px;
+}
+#new:hover{
+background-color:skyblue;
+}
+@keyframes animate{
+0%
+{
+color:#f00;
+box-shadow:0 2px 10px rgba(255,0,0,1);
+border:1px solid rgba(255,0,0,1);
+}
+
+33.3%
+{
+color:#ff0;
+box-shadow:0 2px 10px rgba(255,255,0,1);
+border:1px solid rgba(255,255,0,1);
+}
+
+66.6%
+{
+color:#0f0;
+box-shadow:0 2px 10px rgba(0,255,0,1);
+border:1px solid rgba(0,255,0,1);
+}
+
+100%
+{
+color:#f00;
+box-shadow:0 2px 10px rgba(255,0,0,1);
+border:1px solid rgba(255,0,0,1);
+}
+
+}
+.glowing span:nth-child(1)
+{
+animation-delay:0s;
+}
+.glowing span:nth-child(2)
+{
+animation-delay:0.1s;
+}
+.glowing span:nth-child(3)
+{
+animation-delay:0.2s;
+}
+.glowing span:nth-child(4)
+{
+animation-delay:0.3s;
+}
+.glowing span:nth-child(5)
+{
+animation-delay:0.4s;
+}
+.glowing span:nth-child(6)
+{
+animation-delay:0.5s;
+}
+.glowing span:nth-child(7)
+{
+animation-delay:0.6s;
+}
+
+.glowing span:nth-child(8)
+{
+animation-delay:0.7s;
+}
+.glowing span:nth-child(9)
+{
+animation-delay:0.8s;
+}
+
+
+</style>
+</head>
+<body>
+<a href="new1.html" id="new">Home</a>
+<div class="glowing">
+<a href="icons.html"><span>C</span></a>
+<a href="icons.html"><span>O</span></a>
+<a href="icons.html"><span>N</span></a>
+<a href="icons.html"><span>T</span></a>
+<a href="icons.html"><span>A</span></a>
+<a href="icons.html"><span>C</span></a>
+<a href="icons.html"><span>T</span></a>
+<a href="icons.html"><span>U</span></a>
+<a href="icons.html"><span>S</span></a>
+</body>
+</html>

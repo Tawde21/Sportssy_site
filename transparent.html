@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<style>
+body
+{
+background-image:url('newimageee.jpg');
+background-size:cover;
+font-family:Verdana;
+font-size:20px;
+margin:0;
+line-height:24px;
+}
+
+.navbar{
+text-align:center;
+width:100%;
+background:blue;
+opacity:0.5;
+}
+.navbar ul{
+margin:0;
+padding:0;
+list-style:none;
+position:relative;
+}
+.navbar ul li a{
+display:block;
+padding:25px;
+color:white;
+text-decoration:none;
+width:150px;
+}
+.navbar ul:after
+{
+content:"";clear:both;
+display:block;
+}
+.navbar ul li{
+float:left;
+listy-style:none;
+}
+.navbar ul ul{
+display:none;
+}
+.navbar ul li:hover > ul{
+display:block;
+}
+.navbar ul li:hover a{
+background-color:black;
+transition:0.9s;
+}
+.navbar ul li: hover a{
+color:white;
+}
+.navbar ul ul{
+background:black;
+padding:0;
+margin:0;
+position:absolute; 
+top:100%;
+}
+.navbar ul ul li{
+float:none;
+position:relative;
+}
+.navbar ul ul li a{
+padding:25px;
+color:white;
+width:300px;
+text-align:left;
+}
+.navbar ul ul li a:hover {
+background:pink;
+color:black;
+transition:0.9s;
+}
+
+
+
+
+
+
+
+
+
+
+
+#sidebar{
+position:fixed;
+width:150px;
+height:400px;
+background:#151719;
+right:-200px;
+
+opacity:0.5;
+Color:black;
+}
+#sidebar.active{
+right:0px;
+}
+
+
+#sidebar ul li a{
+Color:rgba(230,230,230,0.9);
+list-style:none;
+padding:10px 10px;
+border-bottom:1px solid rgba(100,100,100,0.3);
+text-decoration:none;
+
+}
+
+
+#sidebar ul li:hover {
+background:lightpink;
+transition:0.9s;
+}
+
+#sidebar .toggle-btn{
+position:absolute;
+right:210px;
+top:20px;
+}
+
+#sidebar .toggle-btn span{
+display:block;
+width:20px;
+height:5px;
+background:silver;
+margin: 5px 0px;
+
+
+
+
+</style>
+</head>
+<body>
+<div class="navbar">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">clubs</a>
+<ul>
+<li><a href="card.html">ACTIVE YOUTH</a></li>
+<li><a href="card2.html">NEW ERA</a></li>
+<li><a href="card3.html">PLAY WELL</a></li>
+<li><a href="card4.html">WELL SPORT</a></li>
+<li><a href="card5.html">GO RUN</a></li>
+
+</ul>
+</li>
+<li><a href="pics.html">Sports Gallery</a></li>
+
+
+
+
+<li><a href="#">news</a>
+<ul>
+<li><a href="sachin.html">sachin</a></li>
+<li><a href="pv.html">pv sindhu</a></li>
+<li><a href="messi.html">messi</a></li>
+<li><a href="jordan.html">jordan</a></li>
+<li><a href="dhyan.html">dhyan chand</a></li>
+<li><a href="jimmy.html">jimmy george</a></li>
+</ul>
+</li>
+
+<li><a href="#">more</a>
+<ul>
+<li><a href="govthtml.html">GOVERNMENT APPROACH</a></li>
+
+<li><a href="myprj.html">SPORTS CALENDAR</a></li>
+
+</ul>
+</li>
+
+
+
+
+
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

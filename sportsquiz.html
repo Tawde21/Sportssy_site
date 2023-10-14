@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Quiz</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-container {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.choice {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#score {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#next {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+</style>
+<body>
+    <div class="quiz-container">
+        <h1>Sports Quiz</h1>
+        <p id="question"></p>
+        <div id="choices" class="choices">
+            <button class="choice" onclick="checkAnswer(0)"></button>
+            <button class="choice" onclick="checkAnswer(1)"></button>
+            <button class="choice" onclick="checkAnswer(2)"></button>
+        </div>
+        <p id="score">Score: 0</p>
+        <button id="next" class="hidden" onclick="nextQuestion()">Next</button>
+    </div>
+    <script>
+        const questions = [
+    {
+        question: "Which country won the 2018 FIFA World Cup?",
+        choices: ["France", "Brazil", "Germany"],
+        correct: 0,
+    },
+    {
+        question: "Who holds the record for the most home runs in MLB?",
+        choices: ["Babe Ruth", "Hank Aaron", "Barry Bonds"],
+        correct: 2,
+    },
+    {
+        question: "Which team has won the most NBA championships?",
+        choices: ["Los Angeles Lakers", "Boston Celtics", "Chicago Bulls"],
+        correct: 1,
+    },
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionText = document.getElementById("question");
+const choicesContainer = document.getElementById("choices");
+const scoreText = document.getElementById("score");
+const nextButton = document.getElementById("next");
+
+function startQuiz() {
+    nextButton.classList.add("hidden");
+    showQuestion(currentQuestion);
+}
+
+function showQuestion(questionIndex) {
+    if (questionIndex < questions.length) {
+        const question = questions[questionIndex];
+        questionText.innerText = question.question;
+
+        for (let i = 0; i < question.choices.length; i++) {
+            const choice = document.getElementsByClassName("choice")[i];
+            choice.innerText = question.choices[i];
+        }
+    } else {
+        endQuiz();
+    }
+}
+
+function checkAnswer(choiceIndex) {
+    if (choiceIndex === questions[currentQuestion].correct) {
+        score++;
+    }
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        showQuestion(currentQuestion);
+    } else {
+        endQuiz();
+    }
+}
+
+function endQuiz() {
+    questionText.innerText = "Quiz completed!";
+    choicesContainer.style.display = "none";
+    scoreText.innerText = `Your Score: ${score} / ${questions.length}`;
+    nextButton.classList.remove("hidden");
+}
+
+function nextQuestion() {
+    currentQuestion = 0;
+    score = 0;
+    choicesContainer.style.display = "flex";
+    showQuestion(currentQuestion);
+    scoreText.innerText = "Score: 0";
+    nextButton.classList.add("hidden");
+}
+
+startQuiz();
+
+    </script>
+</body>
+</html>
